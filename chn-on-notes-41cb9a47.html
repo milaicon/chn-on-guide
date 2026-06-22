@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯主题知识库 · 赛事信息说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background-color: #f5f0e7;
+            color: #2c2420;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .page-wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            background-color: #fcf9f4;
+            padding: 2.5rem 2.2rem 3rem;
+            border-radius: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 目录感布局 —— 标签式区域标题 */
+        .section-tag {
+            display: inline-block;
+            background: #e6ddd0;
+            padding: 0.2rem 1.2rem 0.25rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            color: #4e3f35;
+            margin-bottom: 0.5rem;
+            border: 1px solid #dcd2c2;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 0.5rem 0 0.3rem;
+            color: #1f1814;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #65574b;
+            border-left: 4px solid #b7a18c;
+            padding-left: 1rem;
+            margin: 0.8rem 0 1.8rem;
+            font-weight: 360;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 520;
+            margin: 2.2rem 0 0.9rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 2px solid #ddd2c2;
+            color: #302824;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 1.5rem 0 0.6rem;
+            color: #3d322b;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        .intro-highlight {
+            background: #efe8dc;
+            padding: 0.8rem 1.2rem;
+            border-radius: 18px;
+            margin: 1.2rem 0 1.8rem;
+            font-size: 1rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.6rem 0 1rem;
+        }
+
+        .card-item {
+            background: #f7f2ea;
+            padding: 1.2rem 1rem 1.1rem;
+            border-radius: 18px;
+            border: 1px solid #e5dacd;
+        }
+
+        .card-item strong {
+            display: block;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+            color: #2f241e;
+        }
+
+        .card-item p {
+            font-size: 0.95rem;
+            margin: 0.2rem 0 0;
+            color: #4b3e34;
+        }
+
+        .info-box {
+            background: #eae1d4;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            margin: 1.8rem 0;
+            border-left: 6px solid #937f6b;
+        }
+
+        .info-box p {
+            margin: 0.3rem 0;
+        }
+
+        .info-box strong {
+            color: #2b1f18;
+        }
+
+        .tip-box {
+            background: #e3d9cc;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            margin: 1.8rem 0;
+            border: 1px dashed #b7a18c;
+        }
+
+        .faq-mini {
+            margin: 1.6rem 0 1rem;
+        }
+
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #ddd0c0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 510;
+            color: #2f241e;
+        }
+
+        .faq-a {
+            padding-left: 0.6rem;
+            color: #53453b;
+            font-size: 0.96rem;
+        }
+
+        .related-links {
+            margin: 2rem 0 0.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid #ddd2c2;
+            font-size: 0.95rem;
+        }
+
+        a {
+            color: #7a5b3f;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: #4b3626;
+            text-decoration-thickness: 2px;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            font-size: 0.85rem;
+            color: #756659;
+            text-align: center;
+            border-top: 1px solid #e5dacd;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 620px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .page-wrap {
+                padding: 1.8rem 1.2rem;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+
+            .info-box, .tip-box {
+                padding: 1rem 1.1rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .page-wrap {
+                padding: 1.2rem 0.9rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-sub {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- 目录感标签 -->
+        <div class="section-tag">📋 知识库入口</div>
+
+        <h1>世界杯 · 赛事信息说明</h1>
+        <div class="hero-sub">从赛制、历史到观赛指引 —— 整理自公开资料</div>
+
+        <!-- 介绍区 / 概述 -->
+        <div class="intro-highlight">
+            <p style="margin:0;"><strong>关于本站</strong> · 本页面围绕<strong>世界杯</strong>这一主题，梳理赛事框架、经典轮次、观赛常识与常见疑问，作为一份简洁的参考索引。内容基于公开的足球赛事信息汇编，力求客观平实。</p>
+        </div>
+
+        <!-- 说明区：赛事特点与结构 -->
+        <h2>赛事框架与特点</h2>
+        <p>现代<strong>世界杯</strong>（FIFA World Cup）由国际足联主办，每四年举办一届。自1930年首届至今，已形成完整的预选赛—决赛圈体系。决赛圈通常由32支（2026年起扩至48支）代表队在主办国进行为期约一个月的角逐。</p>
+
+        <div class="card-grid">
+            <div class="card-item">
+                <strong>赛制结构</strong>
+                <p>小组赛 + 淘汰赛。小组内单循环，胜3分平1分负0分；小组前两名晋级16强，随后单败淘汰直至决赛。</p>
+            </div>
+            <div class="card-item">
+                <strong>经典对阵</strong>
+                <p>决赛、半决赛、1/4决赛等关键轮次经常诞生经典对局，如1950年“马拉卡纳之战”、1970年半决赛等。</p>
+            </div>
+            <div class="card-item">
+                <strong>冠军纪录</strong>
+                <p>巴西5次夺冠（1958、1962、1970、1994、2002），德国/意大利各4次，阿根廷3次，法国2次等。</p>
+            </div>
+            <div class="card-item">
+                <strong>主办分布</strong>
+                <p>迄今在17个国家举办过（包括联合主办），欧洲9次、南美5次、北美/亚洲/非洲各若干次。</p>
+            </div>
+        </div>
+
+        <!-- 提示区 -->
+        <div class="tip-box">
+            <strong>📌 提示 · 信息参考</strong>
+            <p>观看或回顾<strong>世界杯</strong>时，建议同时了解东道主时差、转播版权平台、小组抽签规则等细节。赛事日程、分组抽签、裁判名单等信息通常会在赛前半年至一年由FIFA陆续公布。本页面仅作入口指引，不保证实时同步。</p>
+        </div>
+
+        <!-- 相关信息区 FAQ 摘要 -->
+        <h2>常见问题摘要</h2>
+        <div class="faq-mini">
+            <div class="faq-item">
+                <div class="faq-q">❓ 下一届世界杯何时举行？</div>
+                <div class="faq-a">2026年世界杯将由美国、加拿大、墨西哥联合主办，决赛圈扩军至48支队伍。2022年卡塔尔世界杯已于当年12月结束。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ 预选赛如何参与？</div>
+                <div class="faq-a">各大洲足联（AFC、CAF、UEFA、CONMEBOL、CONCACAF、OFC）各自组织预选赛，通常于决赛年前2-3年展开。具体赛制视所属足联而定。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">❓ 哪里可以查历史比分？</div>
+                <div class="faq-a">FIFA官网提供历届比赛数据，此外不少体育数据平台也收录了完整的世界杯历史比分与统计。需要注意数据来源的权威性。</div>
+            </div>
+        </div>
+
+        <!-- 信息框：赛事文化 / 附加说明 -->
+        <div class="info-box">
+            <strong>🏆 赛事文化拾遗</strong>
+            <p>世界杯不仅是一场体育赛事，也常常反映时代背景与社会风貌。例如1978年阿根廷世界杯与当时政治环境的关联、2002年世界杯首次在亚洲举办等。了解这些背景有助于更立体地理解每届赛事。</p>
+            <p style="margin-top:0.6rem;">更多关于赛事规则、历史沿革、经典场次的信息，可参考相关足球文献或官方档案。</p>
+        </div>
+
+        <!-- 自然嵌入链接的句子 -->
+        <p>如果您想关注最新赛事动态或查阅更系统的资料，可以浏览关于<strong><a href="https://chn-on-shijiebei.com">世界杯</a></strong>的专题信息站，那里对不同年份的赛果、参赛队伍以及纪录有更详细的整理。</p>
+
+        <!-- 附加段落 保持自然 -->
+        <p>对于初次接触世界杯的朋友，建议先从最近一届的赛程回顾开始，或者选择一支历史上战绩稳定的队伍了解其参赛历程，这样更容易建立观赛脉络。</p>
+
+        <!-- 相关信息区 延伸链接 -->
+        <div class="related-links">
+            <span style="font-weight:500;">相关信息：</span>
+            · 国际足联官方网站 （FIFA.com）<br>
+            · 历届世界杯决赛圈结果（Wikipedia 或体育数据库）<br>
+            · 各大洲足联预选赛规则说明
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer-note">
+            <span>页面内容由公开信息整理 · 仅供学习参考 · 不构成官方立场</span><br>
+            <span style="opacity:0.7;">更新于2025年 · 入口页</span>
+        </div>
+    </div>
+</body>
+</html>
